@@ -1,0 +1,894 @@
+@font-face{
+    font-family:'jf-openhuninn';
+    src: url("../font/jf-openhuninn-2.1.eot"),
+        url('../font/jf-openhuninn-2.1.ttf'),
+        url('../font/jf-openhuninn-2.1.woff');
+}
+
+@font-face{
+    font-family: 'DFHeiUBold-B5';
+    src: url('../font/DFHeiUBold-B5.ttc');
+}
+
+*{
+    box-sizing: border-box;
+    -webkit-text-stroke: 0;
+    font-weight: normal;
+}
+
+body{
+    background-color: #FCE1B5;
+    background-image: url('../image/old-2012064_1920.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.backgroundImaga{
+    max-width: fit-content;
+    max-height: fit-content;
+    background-image: url('../image/old-2012064_1920.jpg');
+}
+
+.websize{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.decoration{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 37px;
+}
+
+.line1{
+    width: 100%;
+    border-top: 15px solid #20160F;
+    border-radius: 0px;
+}
+.line2{
+    width: 100%;
+    border-top: 5px solid #20160F;
+    border-radius: 3px;
+}
+
+.spacing {
+    height: 8px;
+    background-color: #d2b48c; /* 中間的背景色 */
+}
+
+.title{
+    display: flex;
+    height: 171px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title img{
+    width: 120px;
+    height: 120px;
+}
+
+.title h1{
+    margin: 0px;
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-size: 160px;
+    letter-spacing: 16px;
+    color: #20160F;
+}
+
+header nav{
+    display: flex;
+    background-color: #20160F;
+    height: 53px;
+    justify-content: space-between;
+    border-radius: 3px;
+}
+
+
+/*article*/
+article{
+    margin-top: 0px;
+}
+
+.secondtitle{
+    display: flex;
+    justify-content: center;
+}
+
+article h1{
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-size: 162px;
+    letter-spacing: 5%;
+    -webkit-text-stroke: 5px #20160F;
+    color: transparent;
+    margin: 0px;
+}
+
+.infobox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border: 8px solid #20160F;
+    padding-top: 51px;
+    height: 584px;
+}
+
+.infobox img{
+    width: 581px;
+    height: 481px;
+    border: 6px solid #20160F;
+    margin-right: 48px;
+}
+
+.prisonerInfo{
+    width: 483px;
+    height: 481px;
+}
+
+.infoSection{
+    height: 91px;
+}
+
+.infoSection p {
+    margin: 0px;
+    margin-bottom: 12px;
+    font-family:'jf-openhuninn';
+    line-height: 150%;
+    color: #20160F;
+    position: relative;
+    overflow: hidden;
+}
+
+/* TextAni 核心動畫樣式 */
+/* 背景形狀的動畫 */
+.TextAni__shape {
+    content: '';
+    position: absolute;
+    background-color: #20160F;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: scaleX(0); /* 初始狀態為收縮 */
+    transform-origin: left;
+    animation: shapeExpand 0.5s ease-out forwards, shapeRetract 1s ease-in 2s forwards; /* 增加縮回動畫 */
+}
+
+/* 背景展開動畫 */
+@keyframes shapeExpand {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* 背景縮回動畫 */
+@keyframes shapeRetract {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+/* 文字漸顯動畫 */
+.TextAni__text {
+    opacity: 0; /* 初始為透明 */
+    position: relative;
+    animation: textFadeIn 0.8s ease-out forwards; /* 文字漸顯動畫 */
+    animation-delay: 0.65s; /* 背景展開後 0.5 秒再顯示文字 */
+}
+
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.infoSection h2{
+    color: #20160F;
+}
+
+.infoSection div{
+    border-top: 3px solid #20160F;
+}
+
+.prisonerCodeBox{
+    position: absolute;
+    bottom: 0%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 407px;
+    height: 46px;
+    background-color: #20160F;
+}
+
+.prisonerCodeBox p{
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.indoDecoLineR{
+    position:absolute;
+    right: 17px;
+    top: 22px;
+    border-left: 2px solid #20160F;
+    height: 274px;
+}
+
+.indoDecoLineL{
+    position:absolute;
+    left: 22px;
+    bottom: 22px;
+    border-left: 2px solid #20160F;
+    height: 274px;
+}
+
+.position{
+    margin-top: 19px;
+}
+
+h3{
+    font-family: 'DFHeiUBold-B5';
+    font-size: 60px;
+    color: #20160F;
+    margin: 0px;
+    margin-top: 42px;
+}
+
+.line3{
+    border-top: 8px solid #20160F;
+    margin-top: 32px;
+    margin-bottom: 44px;
+}
+
+.reportSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reportBox{
+    position: relative;
+    width: 574px;
+    height: 362px;
+    background-color: #20160F;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 55px;
+}
+
+.reportBox iframe{
+    margin-right: 25px;
+}
+
+.positionInfo{
+    position: relative;
+    width: 151px;
+    height: 288px;
+}
+
+.line4 {
+    border-top: 3px solid white;
+    margin-top: 3px;
+    margin-bottom: 18px;
+}
+
+.name{
+    position: absolute;
+   bottom: 0%;
+   right: 0%;
+   
+}
+
+p{
+    font-family:'jf-openhuninn';
+    font-size: 20px;
+    color: white;
+    margin: 0px;
+}
+
+.content{
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.decoLineR{
+    position: absolute;
+    right: 16px;
+    top: 22px;
+    margin: 0px;
+    border-left: 2px solid white;
+    width: 2px;
+    height: 145px;
+}
+
+.decoLineL{
+    position: absolute;
+    left: 16px;
+    bottom: 22px;
+    margin: 0px;
+    border-left: 2px solid white;
+    width: 2px;
+    height: 145px;
+}
+
+ /* FOOT */
+ .list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section{
+    display: flex;
+    width: 154px;
+    margin: 0px 19px;
+    justify-content: center;
+    padding-top: 18px;
+}
+
+.section a{
+    text-decoration: none;
+}
+
+.section p{
+    margin: 0px;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+}
+
+.time{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    margin-left: 23px;
+    margin-top: 12px;
+    width: 158px;
+    height: 28px;
+}
+
+.time div{
+    width: 3px;
+    border-left: 3px solid white;
+}
+
+.time p{
+    margin: 0px;
+    font-family: "Lexend Zetta", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+}
+
+.smalltime{
+    display: none;
+}
+
+article{
+    height: auto;
+    margin: auto;
+    width: 100%;
+
+}
+
+footer{
+    margin-top: 80px;
+    height: 305px;
+    padding: 0%;
+    background-color: #20160F;
+}
+
+.footerArea{
+    max-width: 1440px;
+    height: 305px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+h2{
+    margin: 0px;
+    font-family: "Abhaya Libre", serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: white;
+}
+
+.contactInfo p{
+    font-family:'jf-openhuninn';
+    line-height: 150%;
+    font-size: 16px;
+    margin: 16px 0 16px 0;
+    color: white;
+}
+
+.contactInfo div{
+    margin-top: 5px;
+    margin-bottom: 11px;
+    border-top: 3px solid white;
+    width: 400px;
+    height: 3px;
+}
+
+.prisonimg {
+    position: relative;
+    top: -25px;
+    left: -100px;
+    overflow: hidden;
+  }
+
+.goTop{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background-color: #20160F;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 1000px) {
+
+    /*整體*/
+
+    .websize {
+        width: auto;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+
+
+    .websize {
+        width: auto;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+
+
+
+    /*header*/
+    
+    .title{
+        height: 80%;
+    }
+
+    .title h1 {
+        font-size: 100px;
+        letter-spacing: 4px;
+        margin: 0px;
+    }
+
+    .smalltime{
+        display:block;
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav{
+        width: 105%;
+        height: 53px;
+        justify-self: center;
+        border-radius: 0%;
+        border-top: 3px solid #20160F;
+        border-bottom: 3px solid #20160F;
+        background-color: transparent;
+    }
+
+    header nav .list .section {
+        width: 100%;
+        margin: 0;
+        height: 24px;
+        padding-top: 0px;
+    }
+
+    header nav .list .section p {
+        margin: 0;
+        color: #20160F;
+    }
+
+    #secondsection{
+        border-left: 2px solid #20160F;
+        border-right: 2px solid #20160F;
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav .time{
+        display: none;
+    }
+
+    .time div{
+        border-left:3px solid #20160F ;
+    }
+
+    .time p{
+        color: #20160F;
+    }
+
+
+    /*body*/
+
+    
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+    }
+
+    .prisonimg {
+        position: relative;
+        top: -25px;
+        left: 50px;
+        overflow: hidden;
+      }
+
+
+    .secondtitle h1{
+        font-size: 100px;
+        -webkit-text-stroke: 4px #20160F;
+    }
+
+
+
+    /*article*/
+
+    /*infobox*/
+    .infobox{
+        flex-direction: column;
+        height: auto;
+        border: 4px solid #20160F;
+    }
+
+    .infobox img{
+        height: 70%;
+        width: 90%;
+        margin: auto;
+    }
+
+    .prisonerInfo{
+        display: flex;
+        flex-direction: row;
+        height: 50%;
+        width: 90%;
+        margin: auto;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .infoSection{
+        font-size: 20px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .reportBox{
+        width: 80%;
+    }
+
+    .reportSection{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+
+    .infoContainer1{
+        width: 45%;
+    }
+
+    .infoContainer2{
+        width: 48%;
+    }
+
+    .indoDecoLineL {
+        position: absolute;
+        left: 11px;
+        bottom: 20px;
+        
+    }
+
+    .indoDecoLineR {
+        position: absolute;
+        right:11px;
+        top: 20px;
+    }
+
+
+
+
+
+    .positionInfo{
+        width: 50%;
+    }
+
+
+    footer {
+        flex-direction: column;
+        text-align: left;
+        padding: 20px;
+        height: auto;
+    }
+
+    .footerArea{
+        padding: 0px;
+    }
+
+    .contactInfo h2{
+        font-size:20px;
+    }
+
+   .contactInfo p{
+       font-size: 14px;
+   }
+
+   .contactInfo{
+    width: 60%;
+   }
+
+   footer .line2{
+    width: 100%;
+   }
+
+
+   iframe{
+       width: 30%;
+   }
+    
+
+
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    
+    header{
+        width: auto;
+    }
+
+    header nav .list .section {
+        width: 100%;
+        margin: 0;
+        height: 24px;
+        padding-top: 0px;
+    }
+
+    #secondsection{
+        border-left: 2px solid #20160F;
+        border-right: 2px solid #20160F;
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav{
+        width: 105%;
+        height: 35px;
+        justify-self: center;
+        border-radius: 0%;
+        border-top: 2px solid #20160F;
+        border-bottom: 2px solid #20160F;
+        background-color: transparent;
+    }
+ 
+
+    header nav .list .section p {
+        font-size: 16px; /* 調整文字大小 */
+        margin: 0;
+        color: #20160F;
+    }
+
+    header nav .time{
+        display: none;
+    }
+
+    .smalltime{
+        display:block;
+        display: flex;
+        justify-content: center;
+    }
+
+    .time p{
+        font-size: 13px;
+        color: #20160F;
+    }
+    .time{
+        margin-top: 0px;
+        height: 18px;
+        width: 103px;
+    }
+    .time div{
+        border-left:1px solid #20160F ;
+    }
+
+    header .line1{
+        width: 105%;
+    }
+
+    header .line2{
+        width: 105%;
+    }
+
+
+
+
+    
+    .title{
+        height: 80%;
+    }
+
+    .title h1 {
+        font-size: 48px;
+        letter-spacing: 4px;
+        margin: 0px;
+    }
+
+    .title img {
+        width: 60px;
+        height: 60px;
+    }
+
+    
+    .prisonimg {
+        position: relative;
+        top: -10px;
+        left: 15px;
+        overflow: hidden;
+        width: 90%;
+        height: 10%;
+      }
+
+
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+    }
+
+    .websize {
+        width: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .secondtitle h1{
+        font-size: 57px;
+        -webkit-text-stroke: 2px #20160F;
+    }
+
+
+
+    .infobox{
+        height: auto;
+        border: 3px solid #20160F;
+    }
+
+
+    .prisonerInfo{
+        width: 90%;
+        flex-direction: column;
+        margin: 30px;
+        margin-bottom: 80px;
+    }
+
+    
+
+    .infoSection{
+        height: 100%;
+        margin: 20px;
+        margin-top: 0px;
+    }
+
+    .infoContainer1{
+        width: 80%;
+    }
+
+    .infoContainer2{
+        width: 80%;
+    }
+
+
+
+
+    .prisonerInfo p {
+        font-size: 16px;
+    }
+
+    .prisonerInfo h2 {
+        font-size: 20px;
+    }
+
+
+    .prisonerCodeBox{
+        width: 100%;
+    }
+
+    .indoDecoLineL {
+        position: absolute;
+        left: 8px;
+        bottom: 70px;
+        
+    }
+
+    .indoDecoLineR{
+        position:absolute;
+        right: 8px;
+        top: 22px;
+
+    }
+
+
+
+    .position h3{
+        font-size: 40px;
+        text-align: center
+    }
+    
+    .reportBox{
+        width: 100%;
+    }
+
+    .reportSection{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+
+    .positionInfo{
+        width: 50%;
+
+    }
+
+    .positionInfo p{
+        font-size: 16px;
+    }
+
+
+
+  
+
+
+
+}
